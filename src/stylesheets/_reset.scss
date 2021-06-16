@@ -1,14 +1,14 @@
 * {
   color: #d1d1d1;
   font-family: 'Rubik', 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 body {
-  padding: 20px;
-  background-color: var(--background);
+  padding: 0px;
+  background-color: #f8f8f821;
 }
 
 pre,.monospaced {
-  font-family: var(--monospace);  
+  font-family: 'Inconsolata', monospace;;  
 }
