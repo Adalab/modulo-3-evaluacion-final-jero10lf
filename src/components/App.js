@@ -6,9 +6,11 @@ import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 //import data from "../services/getApi.json";
 import getApiData from "../services/Api";
+import logo from "../images/Rick_and_Morty.png";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
+  const [input, setInput] = useState("");
   useEffect(() => {
     if (characters.length === 0) {
       getApiData().then((data) => {
@@ -18,14 +20,25 @@ const App = () => {
     }
   }, []);
 
-  const filterCharacters = characters;
-  console.log(filterCharacters);
+  const filterCharacters = characters.filter((character) => {
+    return character.name.toLowerCase().includes(input.toLowerCase());
+  });
+  const handleFilter = (inputChange) => {
+    setInput(inputChange.value);
+  };
   return (
     <>
-      <h1>Rick and Morty</h1>
-      <div className="App">
-        <Filter />
-        <CharacterList characters={filterCharacters} />
+      <header className="App-header">
+        <img
+          className="App-header__logo"
+          src={logo}
+          alt="Logo Rick and Morty"
+          title="Logo Rick and Morty"
+        />
+      </header>
+      <div className="App-container">
+        <Filter handleFilter={handleFilter} input={input} />
+        <CharacterList characters={filterCharacters} input={input} />
       </div>
     </>
   );

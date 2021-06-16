@@ -1,0 +1,51 @@
+
+.formfilter {
+  background-color: rgba(182, 64, 162, 0.363);
+  color:white;
+  width: 180px;
+  min-height: 300px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 0 5px 0 lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  &__input {
+    width: 110px;
+    padding: 5px;
+    color: rgb(14, 15, 15);
+    border: 1px solid rgb(59, 6, 59);
+    outline: none;
+  }
+}
+.film-form input {
+  width: 200px;
+  padding: 5px;
+  color: darkcyan;
+  border: 1px solid darkcyan;
+  outline: none;
+}
+// .film-form textarea {
+//   width: 200px;
+//   min-height: 100px;
+//   padding: 5px;
+//   color: rgb(159, 182, 182);
+//   border-color: darkcyan;
+//   outline: none;
+//   &__label {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     align-items: left;
+//     margin: 5px 0;
+//   }
+//   &__input {
+//     width: 15px;
+//     margin-right: 5px;
+//     padding: 5px;
+//   }
+  
+
+
