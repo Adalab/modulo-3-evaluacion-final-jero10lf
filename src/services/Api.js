@@ -1,19 +1,20 @@
 const getApiData = () => {
-  return fetch("https://rickandmortyapi.com/documentation/#get-all-characters")
+  return fetch(
+    "https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json"
+  )
     .then((response) => response.json())
     .then((data) => {
-      const cleanData = data.results.map((user) => {
+      return data.results.map((character) => {
         return {
-          id: user.id,
-          name: user.name,
-          species: user.species,
-          image: user.image,
-          status: user.status,
-          image: user.picture.large,
-          episodes: user.info.count,
+          id: character.id,
+          name: character.name,
+          species: character.species,
+          status: character.status,
+          image: character.image,
+          origin: character.origin.name,
+          episodes: character.episode.length,
         };
       });
-      return cleanData;
     });
 };
 

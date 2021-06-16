@@ -1,11 +1,11 @@
 import "../stylesheets/card.scss";
-
+import React from "react";
 const CharacterCard = (props) => {
   return (
     <li className="item__type--li">
-      <img src="" alt="nombre"></img>
-      <h4 className="item__name"></h4>
-      <p className="item__type">Genero</p>
+      <img src={props.character.image} alt={props.character.name} />
+      <h2 className="item__name">{props.character.name}</h2>
+      <p className="item__type">{props.character.species}</p>
     </li>
   );
 };
