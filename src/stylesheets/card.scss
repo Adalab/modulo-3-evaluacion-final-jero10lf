@@ -10,6 +10,7 @@
   justify-content: center;
 
 
+
   &__name {
     text-transform: capitalize;
     align-self: center;
@@ -19,6 +20,7 @@
     font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration:none;
   }
 
   &__type {
@@ -26,7 +28,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    
+    text-decoration:none;
     padding: 5px;
     width: 130px;
     height: 50px;
@@ -38,7 +40,7 @@
       color: rgb(241, 237, 229);
       border-radius: 10px;
       white-space: nowrap;
-     
+      text-decoration: none;
     }
   }
   

@@ -25,4 +25,16 @@
   &__logo {
     height: 10vw;
   }
+ 
+}
+.App-footer {
+  margin-top: 30px;
+box-sizing: content-box;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 12px;
+height: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }

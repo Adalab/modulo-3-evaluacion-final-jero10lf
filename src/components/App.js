@@ -14,14 +14,25 @@ const App = () => {
     if (characters.length === 0) {
       getApiData().then((data) => {
         setCharacters(data);
-        console.log(data);
       });
     }
   }, []);
 
-  const filterCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(input.toLowerCase());
-  });
+  const filterCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(input.toLowerCase());
+    })
+    .sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    });
+
   const handleFilter = (inputChange) => {
     setInput(inputChange.value);
   };
@@ -39,15 +50,15 @@ const App = () => {
   };
   return (
     <>
-      <div>
-        <header className="App-header">
-          <img
-            className="App-header__logo"
-            src={logo}
-            alt="Logo Rick and Morty"
-            title="Logo Rick and Morty"
-          />
-        </header>
+      <header className="App-header">
+        <img
+          className="App-header__logo"
+          src={logo}
+          alt="Logo Rick and Morty"
+          title="Logo Rick and Morty"
+        />
+      </header>
+      <main className="main">
         <Switch>
           <Route exact path="/">
             <section className="App-container">
@@ -59,7 +70,10 @@ const App = () => {
             <Route path="/CharacterDetail/:id" render={renderCharacterDetail} />
           </section>
         </Switch>
-      </div>
+      </main>
+      <footer className="App-footer">
+        <small>Realizado por &copy;Jero</small>
+      </footer>
     </>
   );
 };
