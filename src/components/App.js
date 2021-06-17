@@ -11,7 +11,9 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [input, setInput] = useState("");
   useEffect(() => {
-    getApiData().then((data) => setCharacters(data));
+    getApiData().then((data) => {
+      setCharacters(data);
+    });
   }, []);
 
   const filterCharacters = characters

@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+//import PropTypes from "prop-types";
 import "../stylesheets/cardList.scss";
 import CharacterCard from "./CharacterCard";
 const CharacterList = (props) => {
@@ -22,8 +22,8 @@ const CharacterList = (props) => {
   );
   return result;
 };
+// CharacterList.propTypes = {
+//   characters: PropTypes.array,
+//   input: PropTypes.string,
+// };
 export default CharacterList;
-CharacterList.propTypes = {
-  characters: propTypes.array,
-  input: propTypes.string,
-};

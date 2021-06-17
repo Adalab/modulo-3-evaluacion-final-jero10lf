@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 const CharacterDetail = (props) => {
   const iconSpecie =
     props.character.species === "Human" ? (
-      <i className="fa-mobile-alt"></i>
+      <i className="fa fa-angle-left"></i>
     ) : (
-      <i className="fa-heart" />
+      <i className="fa fa-angle-left" />
     );
   const iconStatus =
     props.character.status === "Dead" ? (
-      <i className="human fa-solid fa-skull-crossbones fa-fade" />
+      <i className="fa fa-angle-left" />
     ) : (
-      <i className="alien fa-solid fa-heart fa-beat" />
+      <i className="fa fa-angle-left" />
     );
   return (
     <>
@@ -33,14 +33,13 @@ const CharacterDetail = (props) => {
         <div className="CharacterDetail__detail">
           <h2>{props.character.name}</h2>
           <p>
-            Status:
-            <span className="detail__card--span">
-              {props.character.status} {iconStatus}
-            </span>
+            Status:{props.character.status}
+            {iconStatus}
           </p>
           <p>
             Species: {props.character.species} {iconSpecie}
           </p>
+
           <p>Origin: {props.character.origin}</p>
           <p>Episodes: {props.character.episodes}</p>
         </div>
@@ -48,7 +47,7 @@ const CharacterDetail = (props) => {
     </>
   );
 };
-export default CharacterDetail;
+
 // CharacterDetail.propTypes = {
 //   character: PropTypes.shape({
 //     image: PropTypes.string,
@@ -59,3 +58,4 @@ export default CharacterDetail;
 //     episodes: PropTypes.number,
 //   }),
 // };
+export default CharacterDetail;

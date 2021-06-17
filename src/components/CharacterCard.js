@@ -1,6 +1,6 @@
 import "../stylesheets/card.scss";
 import React from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const CharacterCard = (props) => {
   return (
@@ -18,11 +18,13 @@ const CharacterCard = (props) => {
     </Link>
   );
 };
+// CharacterCard.propTypes = {
+//   character: PropTypes.arrayOf(
+//     (PropTypes.shape = {
+//       id: PropTypes.number,
+//       image: PropTypes.string,
+//       species: PropTypes.string,
+//     })
+//   ),
+// };
 export default CharacterCard;
-CharacterCard.propTypes = {
-  character: (PropTypes.shape = {
-    id: PropTypes.number,
-    image: PropTypes.string,
-    species: PropTypes.string,
-  }),
-};
