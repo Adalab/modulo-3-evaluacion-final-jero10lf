@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 const CharacterDetail = (props) => {
   const iconSpecie =
     props.character.species === "Human" ? (
-      <i className="fa fa-angle-left"></i>
+      <i className="fa fa-use"></i>
     ) : (
-      <i className="fa fa-angle-left" />
+      <i className="fas fa-meteor" />
     );
   const iconStatus =
     props.character.status === "Dead" ? (
-      <i className="fa fa-angle-left" />
+      <i className="fas fa-dizzy" />
     ) : (
-      <i className="fa fa-angle-left" />
+      <i className="fa fa-heart" />
     );
   return (
     <>
