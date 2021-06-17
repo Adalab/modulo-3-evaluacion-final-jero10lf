@@ -1,12 +1,13 @@
 import React from "react";
+//import PropTypes from "prop-types";
 import "../stylesheets/cardDetail.scss";
 import { Link } from "react-router-dom";
 const CharacterDetail = (props) => {
   const iconSpecie =
     props.character.species === "Human" ? (
-      <i className=" fa-mobile-alt"></i>
+      <i className="fa-mobile-alt"></i>
     ) : (
-      <i className=" fa-heart" />
+      <i className="fa-heart" />
     );
   const iconStatus =
     props.character.status === "Dead" ? (
@@ -32,8 +33,10 @@ const CharacterDetail = (props) => {
         <div className="CharacterDetail__detail">
           <h2>{props.character.name}</h2>
           <p>
-            Status: {props.character.status}{" "}
-            <span className="detail__card--span">{iconStatus}</span>
+            Status:
+            <span className="detail__card--span">
+              {props.character.status} {iconStatus}
+            </span>
           </p>
           <p>
             Species: {props.character.species} {iconSpecie}
@@ -46,3 +49,13 @@ const CharacterDetail = (props) => {
   );
 };
 export default CharacterDetail;
+// CharacterDetail.propTypes = {
+//   character: PropTypes.shape({
+//     image: PropTypes.string,
+//     name: PropTypes.string,
+//     species: PropTypes.string,
+//     status: PropTypes.string,
+//     origin: PropTypes.string,
+//     episodes: PropTypes.number,
+//   }),
+// };

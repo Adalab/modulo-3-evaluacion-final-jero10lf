@@ -1,4 +1,5 @@
 import "../stylesheets/filter.scss";
+import PropTypes from "prop-types";
 
 const Filter = (props) => {
   const handleChange = (event) => {
@@ -24,3 +25,6 @@ const Filter = (props) => {
 };
 
 export default Filter;
+Filter.propTypes = {
+  input: PropTypes.string,
+};
